@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../main.CSS">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../favicon-16x16.png">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <style>
+        div.text5 div {
+            display: none;
+        }
+        div.text1 div {
+            display: none;
+        }
+        div.text2 div {
+            display: none;
+        }
+        div.text3 div {
+            display: none;
+        }
+        div.text4 div {
+            display: none;
+        }
+
+        h1:hover + div {
+            display: block;
+        }
+        .text5 {
+            width: 300px;
+            border: 3px groove;
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            margin: 15px;
+            background-color: #d8d0d8;
+            box-shadow: 5px 5px 10px rgb(255, 0, 0);
+            color: rgb(255, 0, 0);
+            border-radius: 10px;
+            transition: 2s;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .text5:hover {
+            cursor: pointer;
+            text-decoration: double; 
+            box-shadow: 5px 5px 10px rgb(0, 0, 0); 
+            font-family: Arial, Helvetica, sans-serif; 
+            font-weight: bold; 
+            color: rgb(22, 0, 187);
+            background-color: rgb(97, 249, 249);
+            transition: 3s;
+            width: 400px;
+            border: 10px solid rgb(215, 252, 0);
+            vertical-align: top;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 10px;
+            text-indent: 15px;
+            text-align: justify;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+        }
+        .text1 {
+            width: 300px;
+            border: 5px double;
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            margin: 15px;
+            background-color: #d8ef44;
+            box-shadow: 3px 3px 3px rgb(0, 0, 0); 
+            border-radius: 7px;
+            transition: 2s;
+            color: rgb(23, 102, 5);
+        }
+        .text1:hover {
+            cursor: pointer;
+            text-decoration: solid; 
+            box-shadow: 5px 5px 10px rgb(195, 170, 170); 
+            font-family: Arial, Helvetica, sans-serif; 
+            font-weight: bold; 
+            color: black;
+            background-color: rgb(206, 213, 213);
+            transition: 3s;
+            width: 500px;
+            border: 10px solid;
+            vertical-align: top;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 5px;
+            text-indent: 15px;
+            text-align: justify;
+            font-size: 20px;
+        }
+        .text2 {
+            width: 300px;
+            border: 5px solid rgb(57, 124, 238);
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            margin: 15px;
+            background-color: #3a2cfa;
+            color: rgb(209, 201, 192);
+            box-shadow: 7px 7px 7px rgb(35, 12, 146); 
+            border-radius: 7px;
+            transition: 2s;
+        }
+        .text2:hover {
+            cursor: pointer;
+            text-decoration: underline; 
+            box-shadow: 5px 5px 10px rgb(232, 84, 5); 
+            font-family: Arial, Helvetica, sans-serif; 
+            font-weight: normal; 
+            color: rgb(8, 6, 74);
+            background-color: rgb(241, 169, 76);
+            transition: 3s;
+            width: 380px;
+            border: 10px inset;
+            vertical-align: top;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 10px;
+            text-indent: 30px;
+            text-align: justify;
+            font-size: 23px;
+        }
+        .text3 {
+            width: 300px;
+            border: 5px outset rgb(0, 0, 0);
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            margin: 15px;
+            background-color: #ffffff;
+            color: rgb(255, 0, 0);
+            box-shadow: 7px 7px 7px rgb(66, 44, 2); 
+            border-radius: 7px;
+            transition: 2s;
+        }
+        .text3:hover {
+            cursor: pointer;
+            text-decoration: overline; 
+            box-shadow: 10px 10px 10px rgb(214, 183, 165); 
+            font-family: cursive;
+            font-weight: lighter; 
+            color: rgb(110, 48, 12);
+            background-color: rgb(162, 106, 82);
+            transition: 3s;
+            width: 600px;
+            border: 10px dashed;
+            vertical-align: top;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 20px;
+            text-indent: 20px;
+            text-align: justify;
+            font-size: 23px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .text4 {
+            width: 300px;
+            border: 8px ridge rgb(0, 0, 0);
+            display: inline-block;
+            vertical-align: top;
+            padding: 15px;
+            margin: 15px;
+            background-color: #0d0e46;
+            color: rgb(202, 202, 13);
+            box-shadow: 7px 7px 7px rgb(232, 236, 98); 
+            border-radius: 13px;
+            transition: 2s;
+        }
+        .text4:hover {
+            cursor: pointer;
+            text-decoration: double; 
+            box-shadow: 10px 15px 18px rgb(95, 184, 93); 
+            font-family: cursive;
+            font-weight: lighter; 
+            color: rgb(6, 13, 74);
+            background-color: rgb(225, 30, 108);
+            transition: 3s;
+            width: 330px;
+            border: 10px ridge;
+            vertical-align: top;
+            padding: 25px;
+            margin: 20px;
+            border-radius: 8px;
+            text-indent: 10px;
+            text-align: justify;
+            font-size: 19px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</html>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 3
+        <hr>
+    </header>
+   
+    <main>
+        <div class="text5">
+            <h1>Хоккей с шайбой</h1>
+            <div>
+                Одна из самых популярных зимних дисциплин, и в течение долгих лет именно хоккей был единственным 
+                игровым видом спорта, входившим в программу зимних Олимпиад (до включения в 1998 году в программу 
+                Игр керлинга). Первые упоминания об игре с клюшками на льду относятся к XVIII веку, однако 
+                современный вид хоккей с шайбой начал приобретать только в конце XIX века в Канаде, где состоялись 
+                первые матчи по этому виду спорта.
+            </div>
+        </div>
+      
+        <div class="text1">
+            <h1>Футбол</h1>
+            <div>
+                Командный вид спорта, в котором целью является забить мяч в ворота соперника ногами или другими частями 
+                тела (кроме рук) большее количество раз, чем команда соперника. В настоящее время самый популярный и 
+                массовый вид спорта в мире.
+            </div>
+        </div>
+
+        <div class="text2">
+            <h1>Counter-Strike 2</h1>
+            <div>
+                Компьютерная игра в жанре многопользовательского тактического шутера от первого лица, разработанная компанией 
+                Valve. Она стала 5-й игрой в серии Counter-Strike и заявляется как бесплатное обновление к Global Offensive
+            </div>
+        </div>
+
+        <div class="text3">
+            <h1>Kinder</h1>
+            <div>
+                <i>Бренд шоколада, производимого итальянской транснациональной кондитерской компанией Ferrero. Продукция под 
+                    брендом Kinder включает несколько разновидностей и продаётся более чем в 125 странах мира. Впервые
+                    представлен 24 октября 1968 (56 лет назад)</i>
+            </div>
+        </div>
+
+        <div class="text4">
+            <h1>Москва</h1>
+            <div>
+                Столица России, город федерального значения, административный центр Центрального федерального округа 
+                и центр Московской области, в состав которой не входит. Мегаполис; крупнейший по численности населения город 
+                России и её субъект — 13 149 803 человека (2024), что делает Москву 22-й среди городов мира по численности 
+                населения. Центр Московской городской агломерации. Самый крупный город Европы по площади и населению.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Алина Геворкян, ФБИ-33, 2 курс, 2025
+    </footer>
+</body>
