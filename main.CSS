@@ -1,13 +1,13 @@
 body {
-    background-color: lightblue;
-    color: maroon;
+    background-color: rgb(235, 242, 171);
+    color: rgb(47, 10, 103);
     font-family: Arial;
     margin: 0px;
 }
 
 header {
-    background-color: blueviolet;
-    color: antiquewhite;
+    background-color: rgb(17, 26, 108);
+    color: rgb(241, 127, 233);
     font-family: Arial;
     margin: 0px;
 }
@@ -19,11 +19,12 @@ main {
 }
 
 footer {
-    background-color: bisque;
-    color: brown;
+    background-color: rgb(17, 26, 108);
+    color: rgb(241, 127, 233);
     font-family: Arial;
     position: fixed;
     bottom: 0;
+    font-size: 20px;
     right: 0;
     left: 0;
 }
