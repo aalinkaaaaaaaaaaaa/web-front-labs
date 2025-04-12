@@ -56,7 +56,9 @@
         }
         @keyframes float5 {
             0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(-20px, 5px) rotate(-6deg); }
+            25%  { transform: translate(50px, -30px) rotate(5deg); }
+            50%  { transform: translate(100px, 0px) rotate(10deg); }
+            75%  { transform: translate(50px, 30px) rotate(5deg); }
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         @keyframes float6 {
@@ -70,19 +72,26 @@
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         @keyframes float8 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(30px, 10px) rotate(12deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(10vw, 1vh); }
+            20%  { transform: translate(-20vw, 10vh); }
+            40%  { transform: translate(18vw, 10vh); }
+            60%  { transform: translate(10vw, -30vh); }
+            80%  { transform: translate(1vw, 1vh); }
+            100% { transform: translate(10vw, 1vh); }
         }
         @keyframes float9 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(-30px, -10px) rotate(-12deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(-10vw, 20vh); }
+            25%  { transform: translate(-40vw, 10vh); }
+            50%  { transform: translate(-30vw, 20vh); }
+            75%  { transform: translate(-10vw, 20vh); }
+            100% { transform: translate(-10vw, 20vh); }
         }
         @keyframes float10 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(20px, 25px) rotate(10deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(5vw, 5vh); }
+            25%  { transform: translate(5vw, 10vh); }
+            50%  { transform: translate(-15vw, -5vh); }
+            75%  { transform: translate(-20vw, 20vh); }
+            100% { transform: translate(5vw, 5vh); }
         }
         @keyframes float11 {
             0%   { transform: translate(0, 0) rotate(0deg); }
@@ -90,14 +99,19 @@
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         @keyframes float12 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(18px, -18px) rotate(9deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(20%, 80%); }
+            20%  { transform: translate(15%, 15%); }
+            40%  { transform: translate(10%, 10%); }
+            60%  { transform: translate(35%, 24%); }
+            80%  { transform: translate(36%, 18%); }
+            100% { transform: translate(20%, 80%); }
         }
         @keyframes float13 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(-18px, 10px) rotate(-7deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(10vw, 20vh); }
+            25%  { transform: translate(40vw, 10vh); }
+            50%  { transform: translate(50vw, 70vh); }
+            75%  { transform: translate(10vw, 40vh); }
+            100% { transform: translate(10vw, 20vh); }
         }
         @keyframes float14 {
             0%   { transform: translate(0, 0) rotate(0deg); }
@@ -105,14 +119,20 @@
             100% { transform: translate(0, 0) rotate(0deg); }
         }
         @keyframes float15 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(-25px, 5px) rotate(-6deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(-10vw, 1vh); }
+            20%  { transform: translate(-30vw, 30vh); }
+            40%  { transform: translate(-10vw, 10vh); }
+            60%  { transform: translate(-30vw, 10vh); }
+            80%  { transform: translate(-30vw, 10vh); }
+            100% { transform: translate(-10vw, 1vh); }
         }
         @keyframes float16 {
-            0%   { transform: translate(0, 0) rotate(0deg); }
-            50%  { transform: translate(12px, 22px) rotate(4deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
+            0%   { transform: translate(10%, 50%); }
+            20%  { transform: translate(5%, 5%); }
+            40%  { transform: translate(10%, 10%); }
+            60%  { transform: translate(30%, 10%); }
+            80%  { transform: translate(30%, 10%); }
+            100% { transform: translate(10%, 50%); }
         }  
         @keyframes float17 {
             0%   { transform: translate(0, 0) rotate(0deg); }
@@ -134,7 +154,7 @@
         .float12 { animation: float12 6.8s ease-in-out infinite; }
         .float13 { animation: float13 6.2s ease-in-out infinite; }
         .float14 { animation: float14 5.3s ease-in-out infinite; }
-        .float15 { animation: float15 7.1s ease-in-out infinite; }
+        .float15 { animation: float15 10s ease-in-out infinite; }
         .float16 { animation: float16 6.3s ease-in-out infinite; }
         .float17 { animation: float17 5.9s ease-in-out infinite; }
     </style>
@@ -151,18 +171,18 @@
             <span class="tag float2" style="top: 10%; left: 5%; font-size: 80px; color: rgb(17, 26, 108); font-family: Tahoma; transform: rotate(-15deg);">Илья</span>
             <span class="tag float3" style="top: 20%; left: 60%; font-size: 68px; color: rgb(221, 84, 152); font-family: Tahoma; transform: rotate(10deg);">Ангелина</span>
             <span class="tag float4" style="top: 40%; left: 70%; font-size: 65px; color: darksalmon; font-family: Tahoma; transform: rotate(-10deg);">Катя</span>
-            <span class="tag float5" style="top: 35%; left: 30%; font-size: 54px; color: rgb(54, 41, 54); font-family: Georgia; transform: rotate(5deg);">Дима</span>
+            <span class="tag float5" style="top: 35%; left: 30%; font-size: 54px; color: rgb(54, 41, 54); font-family: Georgia;">Дима</span>
             <span class="tag float6" style="top: 40%; left: 65%; font-size: 56px; color: darkgreen; font-family: Verdana; transform: rotate(-20deg);">Саша</span>
             <span class="tag float7" style="top: 50%; left: 10%; font-size: 67px; color: rgb(133, 3, 198); font-family: 'Times New Roman'; transform: rotate(30deg);">Кирилл</span>
-            <span class="tag float8" style="top: 60%; left: 75%; font-size: 54px; color: royalblue; font-family: Cambria; transform: rotate(-25deg);">Вика</span>
-            <span class="tag float9" style="top: 65%; left: 65%; font-size: 40px; color: rgb(0, 185, 160); font-family: Comic Sans MS; transform: rotate(15deg);">Марина</span>
-            <span class="tag float10" style="top: 15%; left: 80%; font-size: 49px; color: rgb(45, 29, 212); font-family: Geneva; transform: rotate(0deg);">Виктория</span>
+            <span class="tag float8" style="top: 60%; left: 75%; font-size: 54px; color: royalblue; font-family: Cambria;">Вика</span>
+            <span class="tag float9" style="top: 65%; left: 65%; font-size: 40px; color: rgb(0, 185, 160); font-family: Comic Sans MS;">Марина</span>
+            <span class="tag float10" style="top: 15%; left: 80%; font-size: 49px; color: rgb(45, 29, 212); font-family: Geneva;">Виктория</span>
             <span class="tag float11" style="top: 70%; left: 5%; font-size: 51px; color: crimson; font-family: Trebuchet MS; transform: rotate(-5deg);">Настя</span>
-            <span class="tag float12" style="top: 75%; left: 50%; font-size: 42px; color: rgb(86, 0, 147); font-family: Arial; transform: rotate(10deg);">Влада</span>
-            <span class="tag float13" style="top: 20%; left: 40%; font-size: 53px; color: rgb(8, 77, 126); font-family: Cambria; transform: rotate(-10deg); font-style: italic;">Влад</span>
+            <span class="tag float12" style="top: 75%; left: 50%; font-size: 42px; color: rgb(86, 0, 147); font-family: Arial;">Влада</span>
+            <span class="tag float13" style="top: 20%; left: 40%; font-size: 53px; color: rgb(8, 77, 126); font-family: Cambria; font-style: italic;">Влад</span>
             <span class="tag float14" style="top: 70%; left: 10%; font-size: 56px; color: rgb(0, 0, 0); font-family: 'Courier New'; transform: rotate(15deg);">Денис</span>
-            <span class="tag float15" style="top: 55%; left: 75%; font-size: 44px; color: rgb(65, 22, 22); font-family: Georgia; transform: rotate(-35deg);">Матвей</span>
-            <span class="tag float16" style="top: 75%; left: 30%; font-size: 58px; color: rgb(255, 120, 30); font-family: Tahoma; transform: rotate(20deg);">OG Buda</span>
+            <span class="tag float15" style="top: 55%; left: 75%; font-size: 44px; color: rgb(65, 22, 22); font-family: Georgia;">Матвей</span>
+            <span class="tag float16" style="top: 75%; left: 30%; font-size: 58px; color: rgb(255, 120, 30); font-family: Tahoma;">OG Buda</span>
             <span class="tag float17" style="top: 35%; left: 45%; font-size: 72px; color: rgb(0, 110, 255); font-family: Verdana; transform: rotate(-30deg);">Егор Крид</span>
         </div>
     </main>
