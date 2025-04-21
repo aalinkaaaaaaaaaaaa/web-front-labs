@@ -53,9 +53,9 @@
         </div>
         <p id="filterInfo">Фильтр: Нет</p>
         <p>
-            <p id="helpText">Наведите курсор на изображение для применения фильтра blur.<br></p>
-            <p id="helpText">Положение курсора влияет на силу фильтра: слева - минимальная, справа - максимальная.<br></p>
-            <p id="helpText">Удерживайте Ctrl, Alt или Shift для применения фильтров grayscale, hue-rotate или saturate.</p>
+            <p id="helpText">Наведите курсор на изображение для применения фильтра blur<br></p>
+            <p id="helpText">Положение курсора влияет на силу фильтра: слева - минимальная, справа - максимальная<br></p>
+            <p id="helpText">Удерживайте Ctrl, Alt или Shift для применения фильтров grayscale, hue-rotate или saturate соответственно</p>
         </p>
     </main>
 
@@ -84,7 +84,7 @@
                 filterAmount = filterValue * 360;
             } else if (event.shiftKey) {
                 filterType = 'saturate';
-                filterAmount = 50 + filterValue * 150; // Adjusted range: 50-200%
+                filterAmount = 50 + filterValue * 150; 
             } else {
                 filterAmount = filterValue * 10;
             }
