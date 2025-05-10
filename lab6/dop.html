@@ -117,114 +117,113 @@
             background-color: #ffd280 !important; 
         }
     </style>
-</head>
-<body>
-<header>
-    НГТУ, ФБ, Лабораторная работа 6
-    <hr>
-</header>
+    <script>
+        let minTemps = [];
+        let maxTemps = [];
+        let bars = [];
+        let selectedIndex = null;
 
-<main>
-    <div id="chart"></div>
+        function generateChart() {
+            const chart = document.getElementById('chart');
+            const info = document.getElementById('info');
+            const month = document.getElementById('monthInput').value;
+            chart.innerHTML = "";
+            minTemps = [];
+            maxTemps = [];
+            bars = [];
+            selectedIndex = null;
 
-    <div id="controls">
-        <label>Номер месяца:
-            <input type="number" id="monthInput" min="1" max="12" value="4">
-        </label>
-        <button onclick="generateChart()">найти</button>
+            let globalMin = Infinity;
+            let globalMax = -Infinity;
 
-        <br><br>
-        <label>Номер дня:
-            <input type="number" id="dayInput" min="1" max="30">
-        </label>
-        <button onclick="highlightDay()">показать</button>
+            for (let i = 0; i < 30; i++) {
+                const min = Math.floor(Math.random() * 10) + 5;
+                const max = min + Math.floor(Math.random() * 15) + 5;
+                minTemps.push(min);
+                maxTemps.push(max);
 
-        <div id="info"></div>
-    </div>
-</main>
+                if (min < globalMin) globalMin = min;
+                if (max > globalMax) globalMax = max;
 
-<footer>
-    <hr>
-    &copy; Алина Геворкян, ФБИ-33, 2 курс, 2025
-</footer>
+                const bar = document.createElement('div');
+                bar.className = 'bar';
+                const minHeight = min;
+                const maxHeight = max - min;
 
-<script>
-    let minTemps = [];
-    let maxTemps = [];
-    let bars = [];
-    let selectedIndex = null;
-
-    function generateChart() {
-        const chart = document.getElementById('chart');
-        const info = document.getElementById('info');
-        const month = document.getElementById('monthInput').value;
-        chart.innerHTML = "";
-        minTemps = [];
-        maxTemps = [];
-        bars = [];
-        selectedIndex = null;
-
-        let globalMin = Infinity;
-        let globalMax = -Infinity;
-
-        for (let i = 0; i < 30; i++) {
-            const min = Math.floor(Math.random() * 10) + 5;
-            const max = min + Math.floor(Math.random() * 15) + 5;
-            minTemps.push(min);
-            maxTemps.push(max);
-
-            if (min < globalMin) globalMin = min;
-            if (max > globalMax) globalMax = max;
-
-            const bar = document.createElement('div');
-            bar.className = 'bar';
-            const minHeight = min;
-            const maxHeight = max - min;
-
-            bar.innerHTML = `
-                <div class="day-label">${i + 1}</div>
-                <div class="max-temp" style="height:${maxHeight * 10}px">${max}°C</div>
-                <div class="min-temp" style="height:${minHeight * 10}px">${min}°C</div>
-            `;
-            chart.appendChild(bar);
-            bars.push(bar);
-        }
-
-        info.innerHTML = `
-            Номер месяца: <strong>${month}</strong><br>
-            Минимальная температура: <span style="color: blue;">${globalMin}°C</span><br>
-            Максимальная температура: <span style="color: red;">${globalMax}°C</span>
-        `;
-    }
-
-    function highlightDay() {
-        const input = document.getElementById('dayInput').value;
-        const index = parseInt(input) - 1;
-
-        if (index >= 0 && index < 30) {
-            if (selectedIndex !== null) {
-                bars[selectedIndex].querySelector('.min-temp').classList.remove('orange-min');
-                bars[selectedIndex].querySelector('.max-temp').classList.remove('orange-max');
+                bar.innerHTML = `
+                    <div class="day-label">${i + 1}</div>
+                    <div class="max-temp" style="height:${maxHeight * 10}px">${max}°C</div>
+                    <div class="min-temp" style="height:${minHeight * 10}px">${min}°C</div>
+                `;
+                chart.appendChild(bar);
+                bars.push(bar);
             }
 
-            bars[index].querySelector('.min-temp').classList.add('orange-min');
-            bars[index].querySelector('.max-temp').classList.add('orange-max');
-            selectedIndex = index;
-
-            const min = minTemps[index];
-            const max = maxTemps[index];
-
-            document.getElementById('info').innerHTML = `
-                День: <strong>${index + 1}</strong><br>
-                Минимальная температура: <span style="color: blue;">${min}°C</span><br>
-                Максимальная температура: <span style="color: red;">${max}°C</span>
+            info.innerHTML = `
+                Номер месяца: <strong>${month}</strong><br>
+                Минимальная температура: <span style="color: blue;">${globalMin}°C</span><br>
+                Максимальная температура: <span style="color: red;">${globalMax}°C</span>
             `;
-        } else {
-            alert("Введите номер дня от 1 до 30");
         }
-    }
 
-    window.onload = generateChart;
-</script>
+        function highlightDay() {
+            const input = document.getElementById('dayInput').value;
+            const index = parseInt(input) - 1;
+
+            if (index >= 0 && index < 30) {
+                if (selectedIndex !== null) {
+                    bars[selectedIndex].querySelector('.min-temp').classList.remove('orange-min');
+                    bars[selectedIndex].querySelector('.max-temp').classList.remove('orange-max');
+                }
+
+                bars[index].querySelector('.min-temp').classList.add('orange-min');
+                bars[index].querySelector('.max-temp').classList.add('orange-max');
+                selectedIndex = index;
+
+                const min = minTemps[index];
+                const max = maxTemps[index];
+
+                document.getElementById('info').innerHTML = `
+                    День: <strong>${index + 1}</strong><br>
+                    Минимальная температура: <span style="color: blue;">${min}°C</span><br>
+                    Максимальная температура: <span style="color: red;">${max}°C</span>
+                `;
+            } else {
+                alert("Введите номер дня от 1 до 30");
+            }
+        }
+
+        window.onload = generateChart;
+    </script>
+</head>
+<body>
+    <header>
+        НГТУ, ФБ, Лабораторная работа 6
+        <hr>
+    </header>
+
+    <main>
+        <div id="chart"></div>
+
+        <div id="controls">
+            <label>Номер месяца:
+                <input type="number" id="monthInput" min="1" max="12" value="4">
+            </label>
+            <button onclick="generateChart()">Найти</button>
+
+            <br><br>
+            <label>Номер дня:
+                <input type="number" id="dayInput" min="1" max="30">
+            </label>
+            <button onclick="highlightDay()">Показать</button>
+
+            <div id="info"></div>
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Алина Геворкян, ФБИ-33, 2 курс, 2025
+    </footer>
 </body>
 </html>
